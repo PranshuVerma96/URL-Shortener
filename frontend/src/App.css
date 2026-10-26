@@ -1,0 +1,287 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0b1020;
+  color: #f8fafc;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(ellipse at 50% 20%, #20285a 0%, transparent 48%),
+    #0b1020;
+}
+
+.navbar {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+  padding: 26px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #252c43;
+}
+
+.logo {
+  color: white;
+  text-decoration: none;
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: #8b7cff;
+}
+
+.nav-label {
+  color: #a5aec5;
+  font-size: 13px;
+}
+
+.hero {
+  width: min(900px, 90%);
+  margin: 90px auto 50px;
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
+  padding: 9px 15px;
+  color: #b7adff;
+  background: #252047;
+  border: 1px solid #484078;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+h1 {
+  margin-top: 25px;
+  font-size: clamp(42px, 7vw, 72px);
+  line-height: 1.12;
+  letter-spacing: -3px;
+}
+
+h1 span {
+  color: #a99bff;
+}
+
+.subtitle {
+  max-width: 540px;
+  margin: 22px auto 0;
+  color: #a5aec5;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.url-form {
+  max-width: 760px;
+  margin: 42px auto 0;
+  padding: 22px;
+  text-align: left;
+  background: #151b2e;
+  border: 1px solid #303952;
+  border-radius: 18px;
+  box-shadow: 0 20px 70px #00000035;
+}
+
+.url-form label {
+  display: block;
+  margin-bottom: 12px;
+  color: #cbd3e5;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.input-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  background: #0c1222;
+  border: 1px solid #343d59;
+  border-radius: 12px;
+}
+
+.link-icon {
+  padding-left: 8px;
+  color: #a99bff;
+  font-size: 24px;
+}
+
+.input-row input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 0;
+  color: white;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.input-row input::placeholder {
+  color: #737e99;
+}
+
+.input-row button,
+.copy-button {
+  padding: 13px 18px;
+  color: white;
+  background: linear-gradient(135deg, #7867f8, #9c6bfa);
+  border: none;
+  border-radius: 9px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.input-row button:hover,
+.copy-button:hover {
+  transform: translateY(-2px);
+}
+
+.input-row button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 20px;
+  padding: 17px;
+  background: #102c2b;
+  border: 1px solid #23615a;
+  border-radius: 12px;
+}
+
+.result-text {
+  min-width: 0;
+}
+
+.result-text span {
+  display: block;
+  margin-bottom: 8px;
+  color: #9de5cb;
+  font-size: 12px;
+}
+
+.result-text a {
+  color: #ffffff;
+  overflow-wrap: anywhere;
+}
+
+.error {
+  margin-top: 12px;
+  color: #ff9292;
+  font-size: 13px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 45px;
+  text-align: left;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 20px 15px;
+  background: #151b2e99;
+  border: 1px solid #252e46;
+  border-radius: 13px;
+}
+
+.feature-icon {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  place-items: center;
+  color: #c4baff;
+  background: #29234e;
+  border-radius: 10px;
+  font-size: 19px;
+}
+
+.feature strong {
+  font-size: 13px;
+}
+
+.feature p {
+  margin-top: 7px;
+  color: #929db7;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+footer {
+  margin-top: auto;
+  padding: 25px 15px;
+  color: #7f8aa4;
+  text-align: center;
+  font-size: 12px;
+}
+
+footer span {
+  padding: 0 5px;
+  color: #a99bff;
+}
+
+@media (max-width: 650px) {
+  .hero {
+    margin-top: 55px;
+  }
+
+  h1 {
+    letter-spacing: -1.5px;
+  }
+
+  .input-row {
+    flex-wrap: wrap;
+  }
+
+  .input-row input {
+    width: calc(100% - 55px);
+  }
+
+  .input-row button {
+    width: 100%;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .result {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nav-label {
+    font-size: 11px;
+  }
+}
+
