@@ -7,7 +7,7 @@ const URL = require("./models/url.models");
 const app = express();
 
 
-const PORT = 8001;
+
 
 // Allow requests from React frontend
 app.use(cors({
@@ -30,6 +30,8 @@ app.use("/", urlRoute);
 
 
 // Start server
-app.listen(PORT, () => {
-console.log(`Server started at ${PORT}`);
+const PORT = process.env.PORT || 8001;
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server started on port ${PORT}`);
 });
