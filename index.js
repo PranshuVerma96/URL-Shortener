@@ -6,7 +6,13 @@ const { connectToMongoDB } = require("./DB/dbConnection");
 const URL = require("./models/url.models");
 
 const app = express();
+const dns = require("node:dns");
 
+// Configure DNS
+dns.setServers(["1.1.1.1", "8.8.8.8"]);
+
+// Load environment variables
+dotenv.config();
 
 
 
